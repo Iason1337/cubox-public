@@ -11,5 +11,11 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === '@A KID MADE IT.#3357') {
+    	message.reply('Please do not tag this guy!');
+  	}
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
