@@ -12,8 +12,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '@A KID MADE IT.') {
-    	message.reply('Please do not tag this guy!');
+    if (message.content === 'stavro') {
+    	message.reply('You may not talk to this guy!');
   	}
 });
 
