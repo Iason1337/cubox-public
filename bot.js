@@ -8,10 +8,6 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'help') {
     	message.reply('View #information for help!');
-  	}
-});
-
-client.on('message', message => {
     if (message.content === 'stavro') {
     	message.reply('You may not talk to this guy!');
   	}
