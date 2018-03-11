@@ -9,9 +9,7 @@ client.on('message', message => {
     if (message.content === 'help') {
     	message.reply('View #information for help!');
     }
-    if (message.content === 'stavro') {
-    	message.reply('You may not talk to this guy!');
-  	}
+
 });
 
 // THIS  MUST  BE  THIS  WAY
