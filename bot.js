@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'help') {
-    	message.reply('View #announcements for help!');
+    	message.reply('View #information for help!');
   	}
 });
 
