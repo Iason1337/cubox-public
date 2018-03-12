@@ -18,6 +18,9 @@ client.on('message', message => {
     else if (message.content === 'who is the best youtuber?') {
         message.reply ('Mcpcmstavros is the best youtuber!');
     }
+    else if (message.content === '!mcpcmstavros packs') {
+        message.reply ('Mcpcmstavros'' resource packs\n 1: TimeDeo 2k');
+    }
     
 
 
