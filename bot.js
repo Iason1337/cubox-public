@@ -15,6 +15,9 @@ client.on('message', message => {
     else if (message.content === 'Who is the best youtuber?') {
         message.reply ('Mcpcmstavros is the best youtuber!');
     }
+    else if (message.content === 'who is the best youtuber?') {
+        message.reply ('Mcpcmstavros is the best youtuber!');
+    }
     
 
 
