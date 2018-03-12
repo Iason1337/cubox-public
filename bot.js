@@ -6,8 +6,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'help') {
-    	message.reply('View #information for help!');
+    if (message.content === '!info') {
+    	message.reply('Hi!');
+    if (message.content === '!help') {
+        message.reply ('Test!');
+    }
     }
 
 });
