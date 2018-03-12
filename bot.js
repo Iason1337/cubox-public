@@ -12,9 +12,6 @@ client.on('message', message => {
     else if (message.content === 'Cubox who created you?') {
         message.reply ('Cuboxic created me :)');
     }
-    else if (message.content === 'Tell me a joke') {
-        message.reply ('Sorry i don''t know any good jokes :P');
-    }
 
 
 });
