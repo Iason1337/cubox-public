@@ -8,8 +8,10 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === '!info') {
     	message.reply('Rules');
-    else if {message.content === '!help') {
-        message.reply ('Rules')
+    }
+    else if (message.content === '!help') {
+        message.reply ('Rules');
+    }
 
 });
 
