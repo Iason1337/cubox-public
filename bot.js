@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === '!info') {
-    	message.reply('No information added');
+    if (message.content === 'sub to mcpcmstavros') {
+    	message.reply('Did someone say Mcpcmstavros? You can subscribe to him here https://www.youtube.com/c/mcpcmstavros');
     }
     else if (message.content === 'Cubox who created you?') {
         message.reply ('Cuboxic created me :)');
