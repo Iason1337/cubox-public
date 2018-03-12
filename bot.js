@@ -12,6 +12,9 @@ client.on('message', message => {
     else if (message.content === 'Cubox who created you?') {
         message.reply ('Cuboxic created me :)');
     }
+    else if (message.content === 'Who is the best youtuber?') {
+        message.reply ('Mcpcmstavros is the best youtuber!');
+    }
     
 
 
