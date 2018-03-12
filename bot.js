@@ -7,10 +7,10 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '!info') {
-    	message.reply('Rules');
+    	message.reply('No information added');
     }
-    else if (message.content === '!help') {
-        message.reply ('Rules');
+    else if (message.content === 'Cubox who created you?') {
+        message.reply ('Cuboxic created me :)');
     }
 
 });
