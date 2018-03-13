@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
-    bot.user.setPresence({ game: { name: 'Test', type: 0 }
 });
 
 client.on('message', message => {
@@ -13,7 +12,6 @@ client.on('message', message => {
     else if (message.content === 'Cubox who created you?') {
         message.reply ('Cuboxic created me :)');
     }
-
 
 });
 
