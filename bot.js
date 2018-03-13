@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am now working correctly!');
     bot.user.setStatus('Online');
-    bot.user.setGame('Test Game);
+    bot.user.setGame('Test Game');
 });
 
 client.on('message', message => {
