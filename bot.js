@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === 'clear 100 messages') {
-    msg.delete(10000);
+    msg.delete(100);
   }
     
 });
