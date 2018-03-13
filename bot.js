@@ -12,7 +12,7 @@ client.on('message', message => {
     else if (message.content === 'Cubox who created you?') {
         message.reply ('Cuboxic created me :)');
     }
-    
+    await discord.SetGame("Test help");
 
 
 });
