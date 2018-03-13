@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-    bot.user.setGame('Hi!');
+bot.user.setPresence({ game: { name: 'nameGoesHere', type: 0 }
 });
 
 client.on('message', message => {
