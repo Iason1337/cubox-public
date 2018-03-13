@@ -2,7 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am ready!');
+    console.log('I am now working correctly!');
+    bot.user.setStatus('Online');
+    bot.user.setGame('Test Game);
 });
 
 client.on('message', message => {
@@ -12,7 +14,6 @@ client.on('message', message => {
     else if (message.content === 'Cubox who created you?') {
         message.reply ('Cuboxic created me :)');
     }
-    await discord.SetGame("Test help");
 
 
 });
