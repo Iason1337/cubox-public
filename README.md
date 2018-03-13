@@ -1,1 +1,1 @@
-# super message bot
+# Information bot by CUBOXIC
