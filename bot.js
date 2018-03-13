@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === 'cubox what is my avatar') {
-    message.reply(message.author.avatarURL);
+    message.reply(message.author.avatarURL '\nHere''s your avatar!');
   }
     
 });
