@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
-    client.setPlayingGame("potato")
+    client.user.setActivity('Null', { type: 'PLAYING'
 });
 
 client.on('message', message => {
