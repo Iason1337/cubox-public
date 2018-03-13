@@ -6,6 +6,13 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  if (message.content === 'what is my avatar') {
+    message.reply(message.author.avatarURL);
+  }
+    
+});
+
+client.on('message', message => {
     if (message.content === 'cubox who created you?') {
     	message.reply('Cuboxic created me :)');
     }
