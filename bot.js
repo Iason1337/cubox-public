@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
-    client.user.setPresence({ game: { name: '!info for information!', type: 0 }
+    client.setPlayingGame("potato")
 });
 
 client.on('message', message => {
