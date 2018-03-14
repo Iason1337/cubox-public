@@ -18,6 +18,11 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === 'test') {
+      message.channel.send({embed: { color: 3447003, description: "A very simple Embed!"
+    }
+});
 
 
 // THIS  MUST  BE  THIS  WAY
