@@ -33,17 +33,17 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-   if (message.content == "!testclear") {
-       try {
-           if (message.member.hasPermission("MANAGE_MESSAGES")) {
-               messages = message.channel.fetchMessages();
-               message.channel.bulkDelete(2);
-           }
-       } catch(e) {
-           message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
-           console.log(e);
-       }
-   }
+  if (message.content == "!testclear") {
+      try {
+          if (message.member.hasPermission("MANAGE_MESSAGES")) {
+              messages = message.channel.fetchMessages();
+              message.channel.bulkDelete(2);
+          }
+      } catch(e) {
+          message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
+          console.log(e);
+      }
+  }
 });
 
 
