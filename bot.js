@@ -53,5 +53,11 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === '!commands') {
+    	message.author.send('Hello, Ask me the following things\ncubox clear the chat\ngive me your creators site\ncubox who created you?\ncubox can you give my avatar?');
+    }
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
