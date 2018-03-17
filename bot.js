@@ -1,9 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
+});
+
+client.on('ready', () => {
+    client.user.setPresence( { game: {name: 'smth', type: 0 }});
 });
 
 client.on('message', message => {
