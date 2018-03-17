@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-    client.setPlayingGame("Test");
+    client.setGame("Test");
 });
 
 client.on('message', message => {
