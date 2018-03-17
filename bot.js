@@ -23,7 +23,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === 'give me your creators site') {
+    if (message.content === 'cubox give me your creators site') {
     	message.reply('Sure! Visit http://www.instantpvp.com/cuboxic');
     }
 });
