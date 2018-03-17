@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
@@ -21,6 +22,17 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === 'give me your creators site') {
     	message.reply('Sure! Visit http://www.instantpvp.com/cuboxic');
+    }
+});
+
+client.on("message", msg => {
+    if (msg.content.toLowerCase().startsWith(prefix + "clearchat") {
+        async function clear() {
+            msg.delete();
+            const fetched = await msg.channel.fetchMessages({limit: 5});
+            msg.channel.bulkDelete(fetched);
+        }
+        clear();
     }
 });
 
