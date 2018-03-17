@@ -33,8 +33,8 @@ client.on('message', message => {
       try {
           if (message.member.hasPermission("MANAGE_MESSAGES")) {
               messages = message.channel.fetchMessages();
-              message.channel.bulkDelete(100);
-              message.reply("I deleted 100 Messages!");
+              message.channel.bulkDelete(200);
+              message.reply("I deleted 200 Messages!");
           }
       } catch(e) {
           message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
