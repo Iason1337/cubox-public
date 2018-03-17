@@ -26,18 +26,11 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  if (message.content === 'test delete') {
-      message.channel.bulkDelete(100);
-  }
-
-});
-
-client.on('message', message => {
-  if (message.content == "!testclear") {
+  if (message.content == "cubox clear the chat") {
       try {
           if (message.member.hasPermission("MANAGE_MESSAGES")) {
               messages = message.channel.fetchMessages();
-              message.channel.bulkDelete(2);
+              message.channel.bulkDelete(100);
           }
       } catch(e) {
           message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
