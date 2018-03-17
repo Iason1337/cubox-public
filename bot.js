@@ -26,7 +26,7 @@ client.on('message', message => {
 });
 
 client.on("message", msg => {
-    if (msg.content.toLowerCase().startsWith(prefix + "clearchat") {
+    if (msg.content.toLowerCase().startsWith('clearchat') {
         async function clear() {
             msg.delete();
             const fetched = await msg.channel.fetchMessages({limit: 5});
