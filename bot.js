@@ -55,7 +55,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!commands') {
-    	message.author.send('Hello, Ask me the following things\ncubox clear the chat\ngive me your creators site\ncubox who created you?\ncubox can you give my avatar?');
+    	message.author.send('Hello, Ask me the following things\n1. cubox clear the chat\n2. cubox give me your creators site\n3. cubox who created you?\n4. cubox can you give my avatar?');
     }
 });
 
