@@ -10,6 +10,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  if (message.content == "cubox clear the chat") {
+      try {
+          if (message.member.hasPermission("MANAGE_MESSAGES")) {
+              messages = message.channel.fetchMessages();
+              message.channel.bulkDelete(200);
+          }
+      } catch(e) {
+          message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
+          console.log(e);
+      }
+  }
+});
+
+client.on('message', message => {
   if (message.content === 'cubox can you give my avatar?') {
     message.reply(message.author.avatarURL);
   }
@@ -26,21 +40,6 @@ client.on('message', message => {
     if (message.content === 'cubox give me your creators site') {
     	message.reply('Sure! Visit http://www.instantpvp.com/cuboxic');
     }
-});
-
-client.on('message', message => {
-  if (message.content == "cubox clear the chat") {
-      try {
-          if (message.member.hasPermission("MANAGE_MESSAGES")) {
-              messages = message.channel.fetchMessages();
-              message.channel.bulkDelete(200);
-              message.reply("I deleted 200 Messages!");
-          }
-      } catch(e) {
-          message.channel.send("ERROR: ERROR CLEARING CHANNEL.");
-          console.log(e);
-      }
-  }
 });
 
 client.on('message', message => {
