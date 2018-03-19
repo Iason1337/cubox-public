@@ -19,4 +19,11 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+  if (message.content === '>clear 100 messages') {
+      message.channel.bulkDelete(100);
+  }
+
+});
+
 client.login(process.env.BOT_TOKEN);
