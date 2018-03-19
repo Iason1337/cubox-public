@@ -32,10 +32,4 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', msg => {
-  if (msg.content === '>test') {
-    member.addRole(test);
-  }
-});
-
 client.login(process.env.BOT_TOKEN);
