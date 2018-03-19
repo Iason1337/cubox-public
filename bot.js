@@ -9,9 +9,9 @@ client.on('ready', () => {
     client.user.setPresence( { game: {name: 'Discord', type: 0 }});
 });
 
-client.on('message', message => {
-    if (msg.content === '>cubox can you give my avatar?') {
-       message.reply(message.author.avatarURL);
+client.on('message', msg => {
+  if (msg.content === '>cubox can you give my avatar?') {
+    msg.reply(message.author.avatarURL);
   }
     
 });
