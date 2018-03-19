@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const guildMember = message.member;
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
@@ -34,8 +35,7 @@ client.on('message', function(message) {
 
 client.on('message', (message) => {
     if (message.content == ">test") {
-  const guildMember = message.member;
-  guildMember.addRole('test');
+    guildMember.addRole('test');
 });
 
 client.login(process.env.BOT_TOKEN);
