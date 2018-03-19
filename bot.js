@@ -6,11 +6,12 @@ client.on('ready', () => {
     console.log('I am now working correctly!');
 });
 
-client.on("message", (message) => {
-  if (!message.content.startsWith(prefix)) return;
-
 client.on('ready', () => {
     client.user.setPresence( { game: {name: 'Discord', type: 0 }});
+});
+
+client.on("message", (message) => {
+  if (!message.content.startsWith(prefix)) return;
 });
 
 client.on('message', message => {
