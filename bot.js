@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const guildMember = message.member;
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
