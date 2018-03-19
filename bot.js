@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = ">";
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
@@ -10,12 +9,8 @@ client.on('ready', () => {
     client.user.setPresence( { game: {name: 'Discord', type: 0 }});
 });
 
-client.on("message", (message) => {
-  if (!message.content.startsWith(prefix)) return;
-});
-
 client.on('message', message => {
-  if (message.content.startsWith(prefix + "cubox can you give my avatar?")) {
+  if (message.content.startsWith('>cubox can you give my avatar?') {
     message.reply(message.author.avatarURL);
   }
     
