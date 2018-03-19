@@ -10,8 +10,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-     if (msg.content === '>cubox can you give my avatar?') {
-      message.reply(message.author.avatarURL);
+    if (msg.content === '>cubox can you give my avatar?') {
+       message.reply(message.author.avatarURL);
   }
     
 });
