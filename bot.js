@@ -9,13 +9,6 @@ client.on('ready', () => {
     client.user.setPresence( { game: {name: 'Discord', type: 0 }});
 });
 
-client.on('message', msg => {
-  if (msg.content === '>cubox can you give my avatar?') {
-    msg.reply(message.author.avatarURL);
-  }
-    
-});
-
 client.on('message', message => {
     if(message.author.bot) return;
     var re =  /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi.exec(message.cleanContent);
@@ -26,11 +19,4 @@ client.on('message', message => {
     }
 });
 
-//client.on('message', message => {
-//    if (message.content === 'Test') {
-//    	message.author.send('Test');
-//    }
-//});
-
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
