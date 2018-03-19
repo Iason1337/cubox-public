@@ -32,10 +32,10 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', msg => {
-  if (msg.content === '>test') {
-    member.addRole(test).catch(console.error);
-  }
+client.on('message', (message) => {
+    if (message.content == ">test") {
+  const guildMember = message.member;
+  guildMember.addRole('test');
 });
 
 client.login(process.env.BOT_TOKEN);
