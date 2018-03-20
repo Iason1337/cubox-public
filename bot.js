@@ -32,16 +32,5 @@ client.on('message', function(message) {
 
 });
 
-client.on('message', msg => {
-  if (msg.content === '>test') {
-    message.channel.send({embed: {
-      color: 3447003,
-      title: "Test:",
-      fields: [
-        { name: "Test 1", value: "Line1\nLine2\nLine3", inline: true},
-        { name: "Test 2", value: "AlsoLine1\nAlsoLine2\nAndLine3", inline: true}
-      ]
-    }
-  });
 
 client.login(process.env.BOT_TOKEN);
