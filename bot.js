@@ -33,7 +33,7 @@ client.on('message', function(message) {
 
 });
 
-bot.on("message", function(message) {
+client.on("message", function(message) {
 
     console.log(message.content);
 
@@ -44,8 +44,6 @@ bot.on("message", function(message) {
 
     var argv = message.content.substr(PREFIX.length).split(" ");
     console.log("argv: "+argv+", argv[1]: "+argv[1]+"");
-
-    // "+VAR_NAME+" Allows you to print a variable
     switch(argv[0].toLowerCase()) {
         case "ping":
             message.channel.send("Ping!");
