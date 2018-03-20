@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const PREFIX = ">";
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
@@ -33,32 +32,16 @@ client.on('message', function(message) {
 
 });
 
-client.on("message", function(message) {
-
-    console.log(message.content);
-
-    if ( message.author.equals(bot.user)) 
-        return;
-    if( !message.content.startsWith(PREFIX))
-        return;
-
-    var argv = message.content.substr(PREFIX.length).split(" ");
-    console.log("argv: "+argv+", argv[1]: "+argv[1]+"");
-    switch(argv[0].toLowerCase()) {
-        case "ping":
-            message.channel.send("Ping!");
-            break;
-        case "embed":
-            var embed = new Discord.RichEmbed()
-                .setTitle(`Title`)
-                .setDescription(`Desc`)
-                .addField("Title", "Description")
-            message.channel.sendEmbed(embed);
-            break;
-        default:
-            message.channel.send("Invalid commands");
+client.on('message', msg => {
+  if (msg.content === '>test') {
+    message.channel.send({embed: {
+      color: 3447003,
+      title: "Test:",
+      fields: [
+        { name: "Test 1", value: "Line1\nLine2\nLine3", inline: true},
+        { name: "Test 2", value: "AlsoLine1\nAlsoLine2\nAndLine3", inline: true}
+      ]
     }
-
-});
+  });
 
 client.login(process.env.BOT_TOKEN);
