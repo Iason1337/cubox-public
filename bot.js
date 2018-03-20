@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const moment = require('moment')
-const args = process.argv.slice(2)
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
