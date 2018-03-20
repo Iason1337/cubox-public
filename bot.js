@@ -26,7 +26,7 @@ client.on('message', function(message) {
             message.channel.fetchMessages()
                .then(function(list){
                     message.channel.bulkDelete(100);
-                    client.message.send(author, "Cleared 100 Messages!");
+                    msg.reply('Cleared 100 messages!');
                 }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
         }
     }
