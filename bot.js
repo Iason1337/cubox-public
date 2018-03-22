@@ -12,7 +12,7 @@ client.on('ready', () => {
 client.on('message', message => {
     if(message.author.bot) return;
     else if (message.member.hasPermission("MANAGE_MESSAGES")) return;
-    var re =  /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi.exec(message.cleanContent);
+    var re =  /[-a-zA-Z0-9@:%_\+.~#?&  =]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&  =]*)?/gi.exec(message.cleanContent);
     if(re != null){
         message.delete().then(message => {
             message.author.send('Sorry, you cannot include links in your messages');
@@ -38,27 +38,27 @@ client.on('message', msg => {
   }
 });
 
-//client.on("message", (message) => {
-    //if (message.content.startsWith(">kick")) {
-     //   var member= message.mentions.members.first();
-     //   member.kick().then((member) => {
-       //     message.channel.send(":wave: " + member.displayName + " has been successfully kicked :thumbsup: ");
-      //  }).catch(() => {
-      //      message.channel.send("Sorry I can't kick this person!");
-      //  });
-  //  }
-//});
+  client.on("message", (message) => {
+      if (message.content.startsWith(">kick")) {
+          var member= message.mentions.members.first();
+          member.kick().then((member) => {
+              message.channel.send(":wave: " + member.displayName + " has been successfully kicked :thumbsup: ");
+          }).catch(() => {
+              message.channel.send("Sorry I can't kick this person!");
+          });
+      }
+  });
 
-//client.on("message", (message) => {
-   // if (message.content.startsWith(">ban")) {
-     //   var member= message.mentions.members.first();
-     //   member.ban().then((member) => {
-       //     message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
-     //   }).catch(() => {
-     //       message.channel.send("Sorry I can't ban this person!");
-     //   });
- //   }
-//});   
+  client.on("message", (message) => {
+      if (message.content.startsWith(">ban")) {
+          var member= message.mentions.members.first();
+          member.ban().then((member) => {
+              message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
+          }).catch(() => {
+              message.channel.send("Sorry I can't ban this person!");
+          });
+      }
+  });   
 
 
 
