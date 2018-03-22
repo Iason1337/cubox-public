@@ -58,6 +58,10 @@ client.on("message", function(message) { // when a message is sent
             .setColor(0xFF0000) // sets a color
             .setFooter("Ooo, an admin!") // sets the footer
         message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
+        
+            }
+
+});
 
 
 client.login(process.env.BOT_TOKEN);
