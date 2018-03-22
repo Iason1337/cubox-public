@@ -42,7 +42,7 @@ client.on('message', msg => {
     //if (message.content.startsWith(">kick")) {
      //   var member= message.mentions.members.first();
      //   member.kick().then((member) => {
-       //     message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+       //     message.channel.send(":wave: " + member.displayName + " has been successfully kicked :thumbsup: ");
       //  }).catch(() => {
       //      message.channel.send("Sorry I can't kick this person!");
       //  });
@@ -53,24 +53,12 @@ client.on('message', msg => {
    // if (message.content.startsWith(">ban")) {
      //   var member= message.mentions.members.first();
      //   member.ban().then((member) => {
-       //     message.channel.send(":fire: " + member.displayName + " has been successfully banned :point_right: ");
+       //     message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
      //   }).catch(() => {
      //       message.channel.send("Sorry I can't ban this person!");
      //   });
  //   }
-//});
-
-client.on('message', function(message) {
-    if (message.content == ">test_kick") {
-        if (message.member.hasPermission("KICK_PLAYERS")) {
-                    var member= message.mentions.members.first();
-        member.kick().then((member) => {
-            message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
-        }).catch(() => {
-            message.channel.send("Sorry I can't kick this person!");
-        });
-    }
-});                  
+//});                
 
 
 client.login(process.env.BOT_TOKEN);
