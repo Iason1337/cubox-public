@@ -34,7 +34,7 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '>help') {
-    msg.reply('This is just a smart @$$ command that will say to visit our site!');
+    msg.reply('\nThis is just a smart @$$ command that will say to visit our site!\n');
   }
 });
 
