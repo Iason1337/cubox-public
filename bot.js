@@ -35,7 +35,9 @@ client.on('message', function(message) {
 client.on('message', msg => {
   if (msg.content === '>help') {
     msg.reply('\nThis is just a smart @$$ command that will say to visit our site!\n');
+  
   }
+    
 });
 
   client.on("message", (message) => {
@@ -46,7 +48,9 @@ client.on('message', msg => {
           }).catch(() => {
               message.channel.send("Sorry I can't kick this person!");
           });
+          
       }
+      
   });
 
   client.on("message", (message) => {
@@ -58,6 +62,7 @@ client.on('message', msg => {
               message.channel.send("Sorry I can't ban this person!");
           });
       }
+      
   });   
 
 
