@@ -32,5 +32,11 @@ client.on('message', function(message) {
 
 });
 
+client.on('message', msg => {
+  if (msg.content === '>ban everyone') {
+    msg.reply('This feature is currently unavailable!');
+  }
+});
+
 
 client.login(process.env.BOT_TOKEN);
