@@ -34,7 +34,7 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '>help') {
-    message.channel.send("Test help message by JASON");
+      message.channel.send("Test help message by JASON");
   }
 });
 
