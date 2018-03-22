@@ -38,27 +38,27 @@ client.on('message', msg => {
   }
 });
 
-client.on("message", (message) => {
-    if (message.content.startsWith(">kick")) {
-        var member= message.mentions.members.first();
-        member.kick().then((member) => {
-            message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
-        }).catch(() => {
-            message.channel.send("Sorry I can't kick this person!");
-        });
-    }
-});
+//client.on("message", (message) => {
+    //if (message.content.startsWith(">kick")) {
+     //   var member= message.mentions.members.first();
+     //   member.kick().then((member) => {
+       //     message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+      //  }).catch(() => {
+      //      message.channel.send("Sorry I can't kick this person!");
+      //  });
+  //  }
+//});
 
-client.on("message", (message) => {
-    if (message.content.startsWith(">ban")) {
-        var member= message.mentions.members.first();
-        member.ban().then((member) => {
-            message.channel.send(":fire: " + member.displayName + " has been successfully banned :point_right: ");
-        }).catch(() => {
-            message.channel.send("Sorry I can't ban this person!");
-        });
-    }
-});
+//client.on("message", (message) => {
+   // if (message.content.startsWith(">ban")) {
+     //   var member= message.mentions.members.first();
+     //   member.ban().then((member) => {
+       //     message.channel.send(":fire: " + member.displayName + " has been successfully banned :point_right: ");
+     //   }).catch(() => {
+     //       message.channel.send("Sorry I can't ban this person!");
+     //   });
+ //   }
+//});
 
 client.on('message', function(message) {
     if (message.content == ">test_kick") {
