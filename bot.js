@@ -39,7 +39,7 @@ client.on('message', msg => {
 });
 
 client.on("message", (message) => {
-    if (message.content.startsWith(">kick")) {
+    if (message.content.startsWith(">admin_test_kick")) {
         var member= message.mentions.members.first();
         member.kick().then((member) => {
             message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
