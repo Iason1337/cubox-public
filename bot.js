@@ -39,7 +39,6 @@ client.on('message', msg => {
 });
 
 client.on("message", (message) => {
-    if (message.member.hasPermission("KICK_MEMBERS"));
     if (message.content.startsWith(">kick")) {
         var member= message.mentions.members.first();
         member.kick().then((member) => {
@@ -51,7 +50,6 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
-    if (message.member.hasPermission("BAN_MEMBERS"));
     if (message.content.startsWith(">ban")) {
         var member= message.mentions.members.first();
         member.ban().then((member) => {
@@ -61,6 +59,18 @@ client.on("message", (message) => {
         });
     }
 });
+
+client.on('message', function(message) {
+    if (message.content == ">test_kick") {
+        if (message.member.hasPermission("KICK_PLAYERS")) {
+                    var member= message.mentions.members.first();
+        member.kick().then((member) => {
+            message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
+        }).catch(() => {
+            message.channel.send("Sorry I can't kick this person!");
+        });
+    }
+});                  
 
 
 client.login(process.env.BOT_TOKEN);
