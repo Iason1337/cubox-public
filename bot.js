@@ -39,6 +39,7 @@ client.on('message', msg => {
 });
 
 client.on("message", (message) => {
+    if (message.member.hasPermission("KICK_MEMBERS"));
     if (message.content.startsWith(">kick")) {
         var member= message.mentions.members.first();
         member.kick().then((member) => {
@@ -50,6 +51,7 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
+    if (message.member.hasPermission("BAN_MEMBERS"));
     if (message.content.startsWith(">ban")) {
         var member= message.mentions.members.first();
         member.ban().then((member) => {
