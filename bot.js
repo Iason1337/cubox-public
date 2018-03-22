@@ -38,8 +38,8 @@ client.on('message', msg => {
   }
 });
 
-client.on("message", function(message) { // when a message is sent
-    if (command == ">help") { // creates a command *help
+client.on('message', msg => {
+  if (msg.content === '>test') {
         var embedhelpmember = new Discord.RichEmbed() // sets a embed box to the variable embedhelpmember
             .setTitle("**List of Commands**\n") // sets the title to List of Commands
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
@@ -58,9 +58,7 @@ client.on("message", function(message) { // when a message is sent
             .setColor(0xFF0000) // sets a color
             .setFooter("Ooo, an admin!") // sets the footer
         message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
-        
-            }
-
+  }
 });
 
 
