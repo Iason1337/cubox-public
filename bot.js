@@ -34,7 +34,7 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '>help') {
-    msg.reply('Sorry I can''t help you right now!');
+    msg.reply('Sorry I can nott help you right now!');
   }
 });
 
