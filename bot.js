@@ -58,7 +58,18 @@ client.on('message', msg => {
      //       message.channel.send("Sorry I can't ban this person!");
      //   });
  //   }
-//});                
+//});   
+
+client.on("message", (message) => {
+if (message.content.startsWith(">kick")) {
+var member= message.mentions.members.first();
+member.kick().then((member) => {
+message.channel.send(":wave: " + member.displayName + " has been successfully kicked :thumbsup: ");
+}).catch(() => {
+message.channel.send("Sorry I can't kick this person!");
+});
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
