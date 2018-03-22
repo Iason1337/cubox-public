@@ -44,7 +44,7 @@ client.on("message", (message) => {
         member.kick().then((member) => {
             message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
         }).catch(() => {
-            message.channel.send("Access Denied");
+            message.channel.send("Sorry I can't kick this person!");
         });
     }
 });
