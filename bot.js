@@ -41,7 +41,7 @@ client.on('message', msg => {
 });
 
   client.on("message", (message) => {
-      if (message.content.startsWith(">kick")) {
+      if (message.content.startsWith(">admin kick")) {
           var member= message.mentions.members.first();
           member.kick().then((member) => {
               message.channel.send(":wave: " + member.displayName + " has been successfully kicked :thumbsup: ");
@@ -54,7 +54,7 @@ client.on('message', msg => {
   });
 
   client.on("message", (message) => {
-      if (message.content.startsWith(">ban")) {
+      if (message.content.startsWith(">admin ban")) {
           var member= message.mentions.members.first();
           member.ban().then((member) => {
               message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
@@ -64,7 +64,5 @@ client.on('message', msg => {
       }
       
   });   
-
-
 
 client.login(process.env.BOT_TOKEN);
