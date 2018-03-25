@@ -33,8 +33,16 @@ client.on('message', function(message) {
 });
 
 client.on('message', msg => {
-  if (msg.content === '>help') {
-    msg.reply('This command is coming very VERY! soon');
+  if (msg.content === 'hi cubox') {
+    msg.reply('Hi there!');
+  
+  }
+    
+});
+
+client.on('message', msg => {
+  if (msg.content === 'cubox how is your day?') {
+    msg.reply('Very busy! I am learning stuff everyday');
   
   }
     
