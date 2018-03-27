@@ -88,7 +88,7 @@ client.on('message', msg => {
 client.on('message', msg => {
 if (msg.content.includes('test')) {
 const embed = new Discord.RichEmbed()
-.addField("Fields title", "Fields description")
+.addField("Test", "Test")
 msg.reply(embed)
 }
 });
