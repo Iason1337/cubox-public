@@ -86,10 +86,10 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-if (message.content.includes('test')) {
+if (msg.content.includes('test')) {
 const embed = new Discord.RichEmbed()
 .addField("Fields title", "Fields description")
-message.channel.send(embed)
+msg.channel.send(embed)
 }
 });
 
