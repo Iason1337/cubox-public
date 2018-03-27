@@ -79,4 +79,10 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === '>help punish') {
+    msg.reply('Hello there!,\n If you would like to kick someone use >admin kick <player>\nEXAMPLE: >admin kick @Panayiotis#3982\nIf you would like to ban someone use >admin ban <player>\nEXAMPLE: >admin ban @Panayiotis#3982');
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
