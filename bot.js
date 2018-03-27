@@ -112,6 +112,7 @@ client.on('message', function(message) {
                     const embed = new Discord.RichEmbed()
                     .addField(">Messaged deleted", "I've cleared 100 Messages!")
                     .setColor(0xffdb4d)
+                    message.channel.send({embed})
                 }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
         }
     }
