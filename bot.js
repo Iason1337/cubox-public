@@ -87,9 +87,9 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-if (msg.content.includes('test')) {
+if (msg.content.includes('>punish')) {
 const embed = new Discord.RichEmbed()
-.addField("Fields title", "Fields description")
+.addField("Test", "Test")
 msg.channel.send({embed})
 }
 });
