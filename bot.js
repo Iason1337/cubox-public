@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const embed = new Discord.RichEmbed();
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
@@ -88,8 +87,9 @@ client.on('message', msg => {
 
 client.on('message', msg => {
 if (msg.content.includes('>punish')) {
+const embed = new Discord.RichEmbed()
 .addField("Test", "Test")
-.setColor(0x00AE86)
+.setColor(0xFFFFFF)
 msg.channel.send({embed})
 }
 });
