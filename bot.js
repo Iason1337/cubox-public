@@ -99,6 +99,8 @@ client.on('message', msg => {
   .setTitle("CUBOX HELP")
   .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
   .addField(">clear", "Clears 100 Messages")
+  .addField(">kick <member>", "Kicks someone")
+  .addField(">ban <member>", "Bans someone")
   .setColor(0xffdb4d)
   .setThumbnail("http://i.imgur.com/rtCnCW3.png")
     msg.channel.send({embed})
