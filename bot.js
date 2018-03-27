@@ -86,12 +86,13 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-if (msg.content.includes('>punish')) {
-const embed = new Discord.RichEmbed()
-.addField("Test", "Test")
-.setColor(0xFFFFFF)
-msg.channel.send({embed})
-}
+  if (msg.content.includes('>punish')) {
+  const embed = new Discord.RichEmbed()
+  .setAuthor("Panayiotis", "https://i.imgur.com/lm8s41J.png")
+  .addField("Test", "Test")
+  .setColor(0xFFFFFF)
+    msg.channel.send({embed})
+  }
 });
    
 client.login(process.env.BOT_TOKEN);
