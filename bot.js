@@ -103,6 +103,7 @@ client.on('message', msg => {
   .addField(">ban <member>", "Bans someone")
   .setColor(0xffdb4d)
   .setThumbnail("http://i.imgur.com/rtCnCW3.png")
+  .setFooter("Do you have more questions? Contact the Developer")
     msg.channel.send({embed})
   }
     
