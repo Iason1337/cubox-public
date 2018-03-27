@@ -90,6 +90,7 @@ client.on('message', msg => {
 if (msg.content.includes('>punish')) {
 const embed = new Discord.RichEmbed()
 .addField("Test", "Test")
+.setColor(0x00AE86)
 msg.channel.send({embed})
 }
 });
