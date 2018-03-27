@@ -76,7 +76,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.includes('>help')) {
+  if (msg.content === '>help') {
   const embed = new Discord.RichEmbed()
   .setTitle("CUBOX HELP")
   .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
@@ -92,7 +92,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.includes('>clear')) {
+  if (msg.content === '>clear') {
   const embed = new Discord.RichEmbed()
   .setTitle("CUBOX CLEAR")
   .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
@@ -169,22 +169,6 @@ client.on('message', function(message) {
         }
     }
 
-});
-
-client.on('message', msg => {
-  if (msg.content === '>test help message') {
-  const embed = new Discord.RichEmbed()
-  .setTitle("CUBOX HELP")
-  .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
-  .addField(">clear", "Will open a menu to choose how much messages to clear\n")
-  .addField(">kick <member>", "Kicks someone\n")
-  .addField(">ban <member>", "Bans someone\n")
-  .setColor(0xffdb4d)
-  .setThumbnail("http://i.imgur.com/rtCnCW3.png")
-  .setFooter("Remember: You may execute commands only with low letters. CASE SENSITIVE")
-    msg.channel.send({embed})
-  }
-    
 });
    
 client.login(process.env.BOT_TOKEN);
