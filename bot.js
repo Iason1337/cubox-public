@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-    client.user.setPresence( { game: {name: '>help', type: 0 }});
+    client.user.setPresence( { game: {name: '>information', type: 0 }});
 });
 
 client.on('message', message => {
@@ -85,7 +85,7 @@ client.on('message', msg => {
   .addField(">ban <member>", "Bans someone")
   .setColor(0xffdb4d)
   .setThumbnail("http://i.imgur.com/rtCnCW3.png")
-  .setFooter("Do you have more questions? Contact the Developer")
+  .setFooter("Remember: You may execute commands only with low letters. CASE SENSITIVE","Do you have more questions? Contact the Developer")
     msg.channel.send({embed})
   }
     
