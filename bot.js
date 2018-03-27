@@ -85,7 +85,7 @@ client.on('message', msg => {
   .addField(">ban <member>", "Bans someone")
   .setColor(0xffdb4d)
   .setThumbnail("http://i.imgur.com/rtCnCW3.png")
-  .setFooter("Remember: You may execute commands only with low letters. CASE SENSITIVE","Do you have more questions? Contact the Developer")
+  .setFooter("Remember: You may execute commands only with low letters. CASE SENSITIVE")
     msg.channel.send({embed})
   }
     
