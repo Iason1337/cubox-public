@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-    client.user.setPresence( { game: {name: '>help', type: 0 }});
+    client.user.setPresence( { game: {name: 'DISCORD.JS', type: 0 }});
 });
 
 client.on('message', message => {
