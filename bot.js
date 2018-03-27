@@ -74,12 +74,6 @@ client.on('message', msg => {
   });   
 
 client.on('message', msg => {
-  if (msg.content === '>help') {
-    msg.reply('Test help message boi');
-  }
-});
-
-client.on('message', msg => {
   if (msg.content === '>help punish') {
     msg.reply('Hello there!,\n If you would like to kick someone use >admin kick <player>\nEXAMPLE: >admin kick @Panayiotis#3982\nIf you would like to ban someone use >admin ban <player>\nEXAMPLE: >admin ban @Panayiotis#3982');
   }
@@ -93,6 +87,19 @@ client.on('message', msg => {
   .addField("Who created this bot?", "This bot was created by Panayiotis, a Greek Developer.")
   .addField("What commands can I use?", "You can use >help to get started!")
   .setColor(0xff0000)
+  .setThumbnail("http://i.imgur.com/rtCnCW3.png")
+    msg.channel.send({embed})
+  }
+    
+});
+
+client.on('message', msg => {
+  if (msg.content.includes('>help')) {
+  const embed = new Discord.RichEmbed()
+  .setTitle("CUBOX HELP")
+  .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
+  .addField(">clear", "Clears 100 Messages")
+  .setColor(0xffdb4d)
   .setThumbnail("http://i.imgur.com/rtCnCW3.png")
     msg.channel.send({embed})
   }
