@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const embed = new Discord.RichEmbed();
 
 client.on('ready', () => {
     console.log('I am now working correctly!');
@@ -84,13 +85,13 @@ client.on('message', msg => {
     msg.reply('Hello there!,\n If you would like to kick someone use >admin kick <player>\nEXAMPLE: >admin kick @Panayiotis#3982\nIf you would like to ban someone use >admin ban <player>\nEXAMPLE: >admin ban @Panayiotis#3982');
   }
 });
-
-client.on("message", msg => {
-if (msg.content.includes("test")) {
-const embed = new Discord.RichEmbed()
-.addField("Test", "Test") => {
-msg.channel.send(embed)
-}
+    
+client.on('message', msg => {
+  if (msg.content === '>test') {
+    .addField("Test", "Test")
+    msg.channel.send(embed)
+      
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
