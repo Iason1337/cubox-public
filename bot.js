@@ -49,7 +49,7 @@ client.on('message', msg => {
 });
 
   client.on("message", (message) => {
-      if (message.content.startsWith(">admin kick")) {
+      if (message.content.startsWith(">kick")) {
           var member= message.mentions.members.first();
           member.kick().then((member) => {
               message.channel.send(":wave: " + member.displayName + " has been successfully kicked :thumbsup: ");
@@ -62,7 +62,7 @@ client.on('message', msg => {
   });
 
   client.on("message", (message) => {
-      if (message.content.startsWith(">admin ban")) {
+      if (message.content.startsWith(">ban")) {
           var member= message.mentions.members.first();
           member.ban().then((member) => {
               message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup: ");
@@ -72,12 +72,6 @@ client.on('message', msg => {
       }
       
   });   
-
-client.on('message', msg => {
-  if (msg.content === '>help punish') {
-    msg.reply('Hello there!,\n If you would like to kick someone use >admin kick <player>\nEXAMPLE: >admin kick @Panayiotis#3982\nIf you would like to ban someone use >admin ban <player>\nEXAMPLE: >admin ban @Panayiotis#3982');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content.includes('>information')) {
@@ -107,6 +101,21 @@ client.on('message', msg => {
     msg.channel.send({embed})
   }
     
+});
+
+client.on('message', function(message) {
+    if (message.content == ">test clear") {
+        if (message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.fetchMessages()
+               .then(function(list){
+                    message.channel.bulkDelete(100);
+                    const embed = new Discord.RichEmbed()
+                    .addField(">Messaged deleted", "I've cleared 100 Messages!")
+                    .setColor(0xffdb4d)
+                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
+        }
+    }
+
 });
    
 client.login(process.env.BOT_TOKEN);
