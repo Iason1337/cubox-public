@@ -20,18 +20,6 @@ client.on('message', message => {
     }
 });
 
-client.on('message', function(message) {
-    if (message.content == ">clear") {
-        if (message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.fetchMessages()
-               .then(function(list){
-                    message.channel.bulkDelete(100);
-                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
-        }
-    }
-
-});
-
 client.on('message', msg => {
   if (msg.content === 'hi cubox') {
     msg.reply('Hi there!');
@@ -104,13 +92,61 @@ client.on('message', msg => {
 });
 
 client.on('message', function(message) {
-    if (message.content == ">test clear") {
+    if (message.content == ">clear 10") {
+        if (message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.fetchMessages()
+               .then(function(list){
+                    message.channel.bulkDelete(10);
+                    const embed = new Discord.RichEmbed()
+                    .addField("Messages deleted", "I've cleared 10 Messages!")
+                    .setColor(0xffdb4d)
+                    message.channel.send({embed})
+                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
+        }
+    }
+
+});
+
+client.on('message', function(message) {
+    if (message.content == ">clear 20") {
+        if (message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.fetchMessages()
+               .then(function(list){
+                    message.channel.bulkDelete(20);
+                    const embed = new Discord.RichEmbed()
+                    .addField("Messages deleted", "I've cleared 20 Messages!")
+                    .setColor(0xffdb4d)
+                    message.channel.send({embed})
+                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
+        }
+    }
+
+});
+
+client.on('message', function(message) {
+    if (message.content == ">clear 50") {
+        if (message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.fetchMessages()
+               .then(function(list){
+                    message.channel.bulkDelete(50);
+                    const embed = new Discord.RichEmbed()
+                    .addField("Messages deleted", "I've cleared 50 Messages!")
+                    .setColor(0xffdb4d)
+                    message.channel.send({embed})
+                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
+        }
+    }
+
+});
+
+client.on('message', function(message) {
+    if (message.content == ">clear 100") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
                     message.channel.bulkDelete(100);
                     const embed = new Discord.RichEmbed()
-                    .addField(">Messaged deleted", "I've cleared 100 Messages!")
+                    .addField("Messages deleted", "I've cleared 100 Messages!")
                     .setColor(0xffdb4d)
                     message.channel.send({embed})
                 }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
