@@ -86,9 +86,9 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.includes('>punish')) {
+  if (msg.content.includes('>information')) {
   const embed = new Discord.RichEmbed()
-  .setAuthor("Panayiotis", "https://i.imgur.com/lm8s41J.png")
+  .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
   .addField("Test", "Test")
   .setColor(0xFFFFFF)
     msg.channel.send({embed})
