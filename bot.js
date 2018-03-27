@@ -91,9 +91,12 @@ client.on('message', msg => {
   .setTitle("CUBOX Creation")
   .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
   .addField("Who created this bot?", "This bot was created by Panayiotis, a Greek Developer.")
-  .setColor(0xFFFFFF)
+  .addField("What commands can I use?", "You can use >help to get started!")
+  .setColor(0xff0000)
+  .setThumbnail("http://i.imgur.com/rtCnCW3.png")
     msg.channel.send({embed})
   }
+    
 });
    
 client.login(process.env.BOT_TOKEN);
