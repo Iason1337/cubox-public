@@ -173,5 +173,16 @@ client.on('message', function(message) {
       }
       
   });  
+
+client.on('message', msg => {
+  if (msg.content === '>avatar') {
+  const embed = new Discord.RichEmbed()
+  .setTitle("CUBOX IMAGE")
+  .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
+  .setThumbnail("message.author.avatarURL")
+    msg.channel.send({embed})
+  }
+    
+});
    
 client.login(process.env.BOT_TOKEN);
