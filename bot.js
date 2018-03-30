@@ -175,11 +175,11 @@ client.on('message', function(message) {
   }); 
 
 client.on('message', msg => {
-  if (msg.content === '>playlist') {
+  if (msg.content === '>music') {
   const embed = new Discord.RichEmbed()
-  .setTitle("Trap Nation")
+  .setTitle("_=_=_=_=_= Music =_=_=_=_=_")
   .addField("Duration", "02:26:33")
-  .addField("Channel", "Uploaded by TrapNation")
+  .addField("Channel", "Uploaded by ChillNation")
   .setColor(0xffdb4d)
   .setThumbnail("https://images-ext-2.discordapp.net/external/Zdj-EIYZixh-NSFIQrmwLq6wn8RjzwEk4Hebb--Mryk/https/i.ytimg.com/vi/KOgvA98FifU/hqdefault.jpg?width=80&height=60")
     msg.channel.send({embed})
