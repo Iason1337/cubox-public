@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-    client.user.setPresence( { game: {name: '>information | NEW UPDATE >update', type: 0 }});
+    client.user.setPresence( { game: {name: '>information | NEW UPDATE >updates', type: 0 }});
 });
 
 client.on('message', message => {
