@@ -179,7 +179,7 @@ client.on('message', msg => {
   const embed = new Discord.RichEmbed()
   .setTitle("_=_=_=_=_= Music =_=_=_=_=_")
   .addField("Duration", "00:31:38")
-  .addField("\u200B", "")
+  .addField("\u200B", "\u200B")
   .addField("Channel", "Uploaded by ChillNation")
   .setColor(0xffdb4d)
   .setThumbnail("https://i.ytimg.com/vi/_YltzRfb-Yo/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCnTz7KgHmiDVjj3-FAgIACLcdWVg")
