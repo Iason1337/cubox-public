@@ -173,5 +173,17 @@ client.on('message', function(message) {
       }
       
   }); 
+
+client.on('message', msg => {
+  if (msg.content === '>playlist') {
+  const embed = new Discord.RichEmbed()
+  .setTitle("CUBOX PLAYLIST")
+  .addField(">clear 10", "Clears 10 Messages")
+  .setColor(0xffdb4d)
+  .setThumbnail("https://images-ext-2.discordapp.net/external/Zdj-EIYZixh-NSFIQrmwLq6wn8RjzwEk4Hebb--Mryk/https/i.ytimg.com/vi/KOgvA98FifU/hqdefault.jpg?width=80&height=60")
+    msg.channel.send({embed})
+  }
+    
+});
    
 client.login(process.env.BOT_TOKEN);
