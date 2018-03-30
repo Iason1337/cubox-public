@@ -177,13 +177,29 @@ client.on('message', function(message) {
 client.on('message', msg => {
   if (msg.content === '>music') {
   const embed = new Discord.RichEmbed()
-  .setTitle("_=_=_=_=_= Music =_=_=_=_=_")
+  .setTitle("CUBOX MUSIC PLAYLIST")
   .addField("Duration", "00:31:38")
   .addField("\u200B", "\u200B")
   .addField("Channel", "Uploaded by ChillNation")
   .setColor(0xffdb4d)
   .setThumbnail("https://i.ytimg.com/vi/_YltzRfb-Yo/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCnTz7KgHmiDVjj3-FAgIACLcdWVg")
   .setFooter("Listen to this playlist here: https://www.youtube.com/watch?v=_YltzRfb-Yo")
+    msg.channel.send({embed})
+  }
+    
+});
+
+client.on('message', msg => {
+  if (msg.content === '>updates') {
+  const embed = new Discord.RichEmbed()
+  .setTitle("CUBOX UPDATE")
+  .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
+  .addField(">music", "Will desplay quality playlists!")
+  .addField(">kick <member>", "Kicks someone")
+  .addField(">ban <member>", "Bans someone")
+  .setColor(0xffdb4d)
+  .setThumbnail("http://i.imgur.com/rtCnCW3.png")
+  .setFooter("This update includes: KICK, BAN AND MUSIC PLAYLISTS")
     msg.channel.send({embed})
   }
     
