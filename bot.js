@@ -183,6 +183,7 @@ client.on('message', msg => {
   .addField("Channel", "Uploaded by ChillNation")
   .setColor(0xffdb4d)
   .setThumbnail("https://i.ytimg.com/vi/_YltzRfb-Yo/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCnTz7KgHmiDVjj3-FAgIACLcdWVg")
+  .setFooter("Listen to this playlist here: https://www.youtube.com/watch?v=_YltzRfb-Yo")
     msg.channel.send({embed})
   }
     
