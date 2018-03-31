@@ -1,7 +1,7 @@
 {
   "name": "CUBOX",
   "description": "Custom bot by CUBOXIC",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
