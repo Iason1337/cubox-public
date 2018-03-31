@@ -2,11 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am now online!');
-});
-
-client.on('ready', () => {
-    client.user.setPresence( { game: {name: '>information | NEW UPDATE >update', type: 0 }});
+	client.user.setPresence({
+		game: {
+			name: `${client.guilds.size} servers`, // Change what the bot is watching or playing.
+			type: 3 // 0 for playing, 1 for streaming, 2 for listening and 3 for watching.
+		}
+	});
+	console.log('I am ready!');
 });
 
 client.on('message', message => {
