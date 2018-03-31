@@ -176,6 +176,20 @@ client.on('message', function(message) {
       
   }); 
 
+ client.on("message", (message) => {
+      if (message.content.startsWith(">rank")) {
+          if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(":x: Access denied!")
+          var member= message.mentions.members.first();
+          member.addRole(ROLE).then((member) => {
+              message.channel.send(":fire: " + member.displayName + " has been successfully banned :thumbsup:");
+          }).catch(() => {
+              message.channel.send("Sorry I can't ban this person!");
+          });
+          
+      }
+      
+  }); 
+
 client.on('message', msg => {
   if (msg.content === '>music') {
   const embed = new Discord.RichEmbed()
