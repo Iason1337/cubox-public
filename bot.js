@@ -218,5 +218,19 @@ client.on('message', function(message) {
     }
 
 });
+
+client.on('message', msg => {
+  if (msg.content === '>servers') {
+  const embed = new Discord.RichEmbed()
+  .setTitle("CUBOX SERVERS")
+  .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
+  .addField("${client.guilds.size}", "Servers")
+  .setColor(0xffdb4d)
+  .setThumbnail("http://i.imgur.com/rtCnCW3.png")
+  .setFooter("This update includes: KICK, BAN AND MUSIC PLAYLISTS")
+    msg.channel.send({embed})
+  }
+    
+});
    
 client.login(process.env.BOT_TOKEN);
