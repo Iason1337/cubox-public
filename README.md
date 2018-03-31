@@ -1,1 +1,1 @@
-# Information bot by CUBOXIC
+# MODERATION bot by CUBOXIC
