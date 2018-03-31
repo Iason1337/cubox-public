@@ -208,7 +208,7 @@ client.on('message', msg => {
 });
 
 client.on('message', function(message) {
-    if (message.content == "!clear") {
+    if (message.content == ">clear ultra") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
