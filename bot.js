@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	client.user.setPresence({
 		game: {
-			name: `${client.guilds.size} servers`, // Change what the bot is watching or playing.
+			name: `${client.guilds.size} servers | >help`, // Change what the bot is watching or playing.
 			type: 3 // 0 for playing, 1 for streaming, 2 for listening and 3 for watching.
 		}
 	});
