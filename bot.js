@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	client.user.setPresence({
 		game: {
-			name: `${client.guilds.size} servers | >help`, // Change what the bot is watching or playing.
+			name: `${client.guilds.size} servers`, // Change what the bot is watching or playing.
 			type: 3 // 0 for playing, 1 for streaming, 2 for listening and 3 for watching.
 		}
 	});
@@ -23,7 +23,7 @@ client.on('message', message => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'hi cubox') {
+  if (msg.content === 'hi jarvis') {
     msg.reply('Hi there!');
   
   }
@@ -31,7 +31,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'cubox how is your day?') {
+  if (msg.content === 'jarvis how is your day?') {
     msg.reply('Very busy! I am learning stuff everyday');
   
   }
@@ -41,7 +41,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content.includes('>information')) {
   const embed = new Discord.RichEmbed()
-  .setTitle("CUBOX Creation")
+  .setTitle("jarvis Creation")
   .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
   .addField("Who created this bot?", "This bot was created by Panayiotis, a Greek Developer.")
   .addField("What commands can I use?", "You can use >help to get started!")
@@ -208,7 +208,7 @@ client.on('message', msg => {
 });
 
 client.on('message', function(message) {
-    if (message.content == ">clear ultra") {
+    if (message.content == ">clear list") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
