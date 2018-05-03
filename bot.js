@@ -218,5 +218,19 @@ client.on('message', function(message) {
     }
 
 });
+
+ client.on("message", (message) => {
+      if (message.content.startsWith(">inactivity kick")) {
+          if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(":x: Access denied!")
+          var member= message.mentions.members.first();
+          member.kick().then((member) => {
+              message.channel.send(":thumbsup: " + member.displayName + " has been kicked for inactivity!");
+          }).catch(() => {
+              message.channel.send("Sorry I can't kick this person!");
+          });
+          
+      }
+      
+  });
    
 client.login(process.env.BOT_TOKEN);
