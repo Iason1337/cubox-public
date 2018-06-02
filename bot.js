@@ -5,6 +5,10 @@ client.on('ready', () => {
     console.log('I am now online!');
 });
 
+client.on('ready', () => {
+    client.user.setPresence( { game: {name: 'play.olympusnetwork.eu', type: 0 }});
+});
+
 
 client.on('message', message => {
     if(message.author.bot) return;
